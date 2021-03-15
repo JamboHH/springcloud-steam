@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: steam-game
+  cloud:
+    config:
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: config-server
+      name: steam-config
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:80/eureka
+  instance:
+    prefer-ip-address: true
+    hostName: ${spring.cloud.client.ip-address}
+    instance-id: http://${spring.cloud.client.ip-address}:${server.port}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+server:
+  port: 8200

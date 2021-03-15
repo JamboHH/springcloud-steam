@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-steam-admin-7900" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-steam-alipay-8400" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-steam-common-8100" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-steam-config-7500" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-steam-elasticsearch-8500" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-steam-eureka-80" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-steam-game-8200" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-steam-order-8300" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-steam-pojo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-steam-users-8000" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-steam-utils" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-steam-zikpin-7800" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-steam-zuul-9000" charset="UTF-8" />
+  </component>
+</project>

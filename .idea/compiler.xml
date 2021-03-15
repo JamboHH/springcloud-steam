@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springcloud-steam-order-8300" />
+        <module name="springcloud-steam-zikpin-7800" />
+        <module name="springcloud-steam-utils" />
+        <module name="springcloud-steam-user-8000" />
+        <module name="springcloud-steam-common-8100" />
+        <module name="springcloud-steam-eureka-80" />
+        <module name="springcloud-steam-zuul-9000" />
+        <module name="springcloud-steam-admin-7900" />
+        <module name="springcloud-steam-pojo" />
+        <module name="springcloud-steam-game-8200" />
+        <module name="springcloud-steam-elasticsearch-8500" />
+        <module name="springcloud-steam-alipay-8400" />
+        <module name="springcloud-steam-config-7500" />
+        <module name="springcloud-steam-users-8000" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="springcloud-steam-user-8000" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="springcloud-steam-admin-7900" options="-parameters" />
+      <module name="springcloud-steam-alipay-8400" options="-parameters" />
+      <module name="springcloud-steam-common-8100" options="-parameters" />
+      <module name="springcloud-steam-config-7500" options="-parameters" />
+      <module name="springcloud-steam-elasticsearch-8500" options="-parameters" />
+      <module name="springcloud-steam-eureka-80" options="-parameters" />
+      <module name="springcloud-steam-game-8200" options="-parameters" />
+      <module name="springcloud-steam-order-8300" options="-parameters" />
+      <module name="springcloud-steam-parent" options="-parameters" />
+      <module name="springcloud-steam-pojo" options="-parameters" />
+      <module name="springcloud-steam-user-8000" options="-parameters" />
+      <module name="springcloud-steam-users-8000" options="-parameters" />
+      <module name="springcloud-steam-utils" options="-parameters" />
+      <module name="springcloud-steam-zikpin-7800" options="-parameters" />
+      <module name="springcloud-steam-zuul-9000" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ah.dao.UserMapper">
+    <resultMap id="BaseResp" type="com.ah.pojo.TbUser">
+        <id property="id" column="id"></id>
+        <result property="userName" column="user_name"></result>
+        <result property="password" column="password"></result>
+        <result property="pic" column="pic"></result>
+        <result property="email" column="email"></result>
+    </resultMap>
+    <sql id="basesql">
+        id,user_name,password,email,pic
+    </sql>
+
+    <select id="findByEmail" resultMap="BaseResp">
+        SELECT
+        <include refid="basesql"></include>
+        from t_user where  email = #{email}
+    </select>
+
+    <select id="findByUserName" resultMap="BaseResp">
+        select
+        <include refid="basesql"></include>
+        from t_user where user_name = #{username}
+    </select>
+
+    <select id="findByUserId" resultMap="BaseResp">
+        select <include refid="basesql"></include> from t_user where id=#{userId}
+    </select>
+
+    <insert id="registry" >
+        INSERT into t_user(<include refid="basesql"></include>) values (null,#{userName},#{password},#{email},#{pic})
+    </insert>
+
+    <update id="updateByUser">
+        update t_user
+        <set>
+            <if test="email != null and email !=''">
+                email=#{email},
+            </if>
+            <if test="password != null and password !=''">
+                password=#{password},
+            </if>
+            <if test="pic != null">
+                pic=#{pic}
+            </if>
+        </set>
+        where id=#{id}
+    </update>
+</mapper>

@@ -1,0 +1,15 @@
+server:
+  port: 7800
+spring:
+  application:
+    name: zipkin-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:80/eureka
+#zipkin启动报错无法访问的解决方法
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false

@@ -1,0 +1,10 @@
+com\ah\pojo\Game.class
+com\ah\pojo\req\CommentResp.class
+com\ah\pojo\Comment.class
+com\ah\pojo\GameOrder.class
+com\ah\pojo\GameType.class
+com\ah\pojo\GameDetails.class
+com\ah\pojo\Permission.class
+com\ah\common\BaseResp.class
+com\ah\pojo\req\TbUserReq.class
+com\ah\pojo\TbUser.class

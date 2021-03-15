@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: steam-user
+  cloud:
+    config:
+      name: steam-config
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: config-server
+  mail:
+    host: smtp.qq.com
+    username: 759482994@qq.com
+    password: zqnkyecrvtnnbfbc
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+      default-encoding: UTF-8
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:80/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+server:
+  port: 8000

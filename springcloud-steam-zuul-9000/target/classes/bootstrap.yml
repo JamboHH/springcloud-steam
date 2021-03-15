@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: zuul
+  cloud:
+    config:
+      name: steam-config
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: config-server
+server:
+  port: 9000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:80/eureka
+  instance:
+    prefer-ip-address: true
+    hostName: ${spring.cloud.client.ip-address}
+    instance-id: http://${spring.cloud.client.ip-address}:${server.port}
+#当使用zuul进行请求
+zuul:
+  sensitive-headers:

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ah.dao.CommentMapper">
+    <resultMap id="BaseResult" type="com.ah.pojo.Comment">
+        <id column="c_id" property="cId"></id>
+        <result column="game_id" property="gameId"></result>
+        <result column="user_id" property="userId"></result>
+        <result column="content" property="content"></result>
+        <result column="like_count" property="likeCount"></result>
+        <result column="create_time" property="createTime"></result>
+    </resultMap>
+    <sql id="BaseSql">
+        c_id,game_id,user_id,content,like_count,create_time
+    </sql>
+    <select id="findCommentByGameId" resultMap="BaseResult">
+        select <include refid="BaseSql"></include> from comment where game_id=#{gameId} order by c_id desc
+    </select>
+
+    <select id="findHotComment" resultMap="BaseResult">
+        SELECT <include refid="BaseSql"></include> FROM comment WHERE like_count=(SELECT MAX(like_count) FROM comment WHERE game_id=#{gameId}) AND game_id=#{gameId} order by c_id desc
+    </select>
+    <insert id="addComment" parameterType="com.ah.pojo.Comment">
+        insert into comment(game_id,user_id,content,like_count,create_time) values(#{gameId},#{userId},#{content},#{likeCount},#{createTime})
+    </insert>
+
+    <delete id="delComment">
+        delete from comment where user_id=#{userId} and c_id=#{cId}
+    </delete>
+
+    <update id="CommentlikeCount">
+        update comment set like_count=#{likeCount} where c_id=#{cId}
+    </update>
+
+</mapper>

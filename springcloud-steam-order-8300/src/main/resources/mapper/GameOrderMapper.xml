@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ah.dao.GameOrderMapper">
+
+    <sql id="baseSql" >
+        id,orderid,gamename,pic,price,num,status,uid,gid
+    </sql>
+    <insert id="addOrder" parameterType="com.ah.pojo.GameOrder">
+        insert into game_order(<include refid="baseSql"></include>) values(null,#{orderid},#{gamename},#{pic},#{price},#{num},#{status},#{uid},#{gid})
+    </insert>
+
+    <select id="findAll" resultType="com.ah.pojo.GameOrder">
+        select * from game_order where uid=#{uid}
+    </select>
+</mapper>
